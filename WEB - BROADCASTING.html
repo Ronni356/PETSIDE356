@@ -1,0 +1,95 @@
+<html>
+
+    <head>
+        <link href = "Style2.css" rel = "stylesheet">
+        <title>
+	        WEB - BROADCASTING
+	    </title>
+    </head>
+  
+    <body>
+    
+	    <!--Шапка сайта-->
+		<div class = "header">
+			<header>
+				<div class = "logo">
+					<!--Логотип-->
+					<a class = "imglogo" href = "WEB - BROADCASTING.html"><img class = "logo" src = "lapadog.png" align = "middle"></img></a>
+					
+					<!--Ссылка-->
+					<a class = "logo" href = "WEB - BROADCASTING.html">
+						<span class = "logo-span">
+						PET
+						</span>
+						-
+						<span class = "name-span">
+						SIDE
+						</span>
+						.ru
+					</a>
+					
+					<p class = "logo" href = "WEB - BROADCASTING.html">
+						Гостиница для животных - это просто!
+					</p>
+				</div>
+		
+				<div class = "auth">
+					<p class = "auth">
+					т. 73-79-01
+					</p>
+					
+					<button class = "auth"  onclick = "location.href='Main.html'">Выход</button>
+				</div>
+			</header>
+		</div>
+		
+		<!--Описание и фото комнаты-->
+		<div class = "body">
+			<video autoplay='true' id='videoElement'>
+			</video>
+			<script>
+				var video=document.querySelector("#videoElement");
+				navigator.getUserMedia=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
+				
+				if(navigator.getUserMedia){
+					navigator.getUserMedia({video:true},handleVideo,videoError);
+				}
+				function handleVideo(stream){
+					video.srcObject = stream;
+				}
+				function videoError(e){ 
+				}
+			</script>
+		</div>
+		
+		<!--Контакты-->
+		<div class = "contacts">
+			<div class = "contacts_div">
+				<div class = "contacts_info">
+					<h2 class = "contacts_info">
+						PET - SIDE
+					</h2>
+					
+					<p class = "contacts_info">
+						Мы заботимся - вы отдыхаете
+					</p>
+				</div>
+				
+				<div class = "contacts_adres">
+					<h2 class = "contacts_adres">
+						Наши контакты:
+					</h2>
+					
+					<p class = "contacts_adres">
+						PET_SIDE@mail.ru <br>
+						т. 73-79-01 <br>
+						г. Магнитогорск, пос. Хуторки, д. 12 <br>
+					</p>
+				</div>
+			</div>
+			
+			<img class = "contacts" src="ground.png"><img>
+		</div>
+		
+    </body>
+</html>
